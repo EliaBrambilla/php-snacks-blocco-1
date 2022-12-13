@@ -5,29 +5,27 @@ Stampiamo a schermo tutte le partite con questo schema.
 Olimpia Milano - Cantù | 55-60
 
 <?php
-    $partite = [
-        [
-            'squadracasa' => 'Milano',
-            'squadraospite' => 'Cantù' ,
-            'punticasa' => '55' ,
-            'puntiospiti' => '60' ,
-        ]
-        [
-            'squadracasa' => 'Genova' ,
-            'squadraospite' => 'Bari' ,
-            'punticasa' => '70' ,
-            'puntiospiti' => '80' ,
-        ]
-        [
-            'squadracasa' => 'Treviso' ,
-            'squadraospite' => 'Palermo' ,
-            'punticasa' => '70' ,
-            'puntiospiti' => '80' ,
-        ]
-        
+$game = [
+    [
+        `teamhome` => `Napoli`,
+        `teamguest` => `Inter`,
+        `pointhome` => `55`,
+        `pointguest` => `30`,
+    ],
+    [
+        `teamhome` => `Genova`,
+        `teamguest` => `Bari`,
+        `pointhome` => `70`,
+        `pointguest` => `25`,
+    ],
+    [
+        `teamhome` => `Lazio`,
+        `teamguest` => `Venezia`,
+        `pointhome` => `90`,
+        `pointguest` => `60`,
     ]
-    for( $i = 0; $i < count($partite) ; $i++){
-        echo $partite[&i]['squadracasa'] . '-' . $partite[$i]['squadraospite'] . '|' . $partite[$i]['punticasa'] . '-' . $partite[$i]['puntiospite'];
-    };
-
+];
+for ( $i =0; $i < count($game); $i++) {
+    echo $game[$i]['teamhome'] . '-' . $game[$i]['teamguest'] . '|' . $game[$i]['pointhome'] . '-' . $game[$i]['pointguest'];
+}
 ?>
